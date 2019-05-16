@@ -125,4 +125,7 @@ $(document).ready(function() {
     $('#help').removeClass('active');
   }
   });
+
+   // change new post button to new feature request
+  $("a:contains('New post')").text("New Feature Request");
 });

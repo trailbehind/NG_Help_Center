@@ -4366,5 +4366,11 @@ ul {
   margin-left:20px;
 }
 
+/*Style for submitting a Forum Post*/
+h4 a {
+  color: $color_4;
+  text-decoration: none;
+}
+
 accordioncss.txt
 Displaying accordioncss.txt.
