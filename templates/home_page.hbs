@@ -1,4 +1,7 @@
 <section class="section hero">
+	<div class="hero-title">
+  	<h0>Gaia GPS Help Center</h0>
+	</div>  
   <div class="hero-inner">
     {{search submit=false instant=true class='search search-full'}}
   </div>
@@ -34,10 +37,62 @@
         {{/each}}
       </ul>
       {{pagination}}
-    </section>
+    </section>  <!--closes line 12-->
 		
-			<div class="row">
-        <div class="col-md-5">
+  <div class="row">
+    <div class="col-md-5">
+          <section class="articles">
+            <h3>Getting Started in the App</h3>
+              <ul class="article-list promoted-articles">
+                    {{#each categories}}
+                    {{#is name 'Getting Started in the App'}}
+
+                    {{#each sections}}
+                    {{#is name 'Getting Started in the App'}}
+                    {{#each articles}}
+
+                      <li class="promoted-articles-item">
+                        <a href="{{url}}">{{title}}</a>
+                      </li>
+
+                    {{/each}}
+                    {{/is}}
+
+                    {{/each}}
+                    {{/is}}
+
+                    {{/each}}
+                  </ul>
+          </section>
+        </div> 
+    <!-- 
+    <div class="col-md-5">
+          <section class="articles">
+            <h3>Learn the Basics</h3>
+              <ul class="article-list promoted-articles">
+                    {{#each categories}}
+                    {{#is name 'iOS'}}
+
+                    {{#each sections}}
+                    {{#is name 'iOS: Advanced'}}
+                    {{#each articles}}
+
+                      <li class="promoted-articles-item">
+                        <a href="{{url}}">{{title}}</a>
+                      </li>
+
+                    {{/each}}
+                    {{/is}}
+
+                    {{/each}}
+                    {{/is}}
+
+                    {{/each}}
+                  </ul>
+          </section>
+        </div> 
+    -->
+        <div class="col-md-5 col-md-offset-2">
           {{#if promoted_articles}}
             <section class="articles">
               <h3>Frequently Asked Questions</h3>
@@ -53,62 +108,15 @@
             </section>
           {{/if}}
         </div>
-
-      <!--Known Issues -->
-    <div class="col-md-5 col-md-offset-2">
-      <section class="articles">
-        <h3>Known Issues</h3>
-          <ul class="article-list known-issues">
-                {{#each categories}}
-                {{#is name 'iOS'}}
-
-                {{#each sections}}
-                {{#is name 'Known Issues'}}
-                {{#each articles}}
-
-                  <li class="known-issues-item">
-                    <a href="{{url}}">{{title}}</a>
-                  </li>
-
-                {{/each}}
-                {{/is}}
-
-                {{/each}}
-                {{/is}}
-
-                {{#is name 'Android'}}
-
-                {{#each sections}}
-                {{#is name 'Known Issues'}}
-                {{#each articles}}
-
-                  <li class="known-issues-item">
-                    <a href="{{url}}">{{title}}</a>
-                  </li>
-
-                {{/each}}
-                {{/is}}
-
-                {{/each}}
-                {{/is}}
-
-                {{/each}}
-              </ul>
-      </section>
-
-
-    </div> 
-    </div>
-    
-    
-    </section>
-    </div>
-  
+        
+        </div> <!--closes line 42-->
+	</section>  <!-- closes line 11-->
+</div> <!-- closes line 10-->
 
 <div class="container">
   {{#if help_center.community_enabled}}
     <section class="section community">
-      <h2>{{t 'community'}}</h2>
+      <h1>{{t 'community'}}</h1>
       {{#link 'community' class='community-link'}}
         {{t 'join_conversation'}}
       {{/link}}
